@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*"
+    tools:context=".MainActivity">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/equationField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="4"
+            android:digits="true"
+            android:ems="10"
+            android:gravity="bottom|right"
+            android:inputType="number"
+            android:lineSpacingExtra="8sp"
+            android:minHeight="203dip"
+            android:singleLine="true"
+            android:textSize="20sp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="49dip">
+
+        <EditText
+            android:id="@+id/numField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="4"
+            android:ems="10"
+            android:gravity="bottom|right"
+            android:inputType="number"
+            android:singleLine="true"
+            android:text="0"
+            android:textSize="24sp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnClear"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:fontFamily="@font/anaheim"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="88dip"
+            android:onClick="handleClick"
+            android:text="AC"
+            android:textColor="#2ac8b9"
+            android:textSize="24sp"
+            app:iconTint="@color/black" />
+
+        <Button
+            android:id="@+id/btnRemove"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:fontFamily="@font/anaheim"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="88dip"
+            android:onClick="handleClick"
+            android:text="--"
+            android:textColor="#2ac8b9"
+            android:textSize="24sp"
+            app:iconTint="@color/black" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="88dip">
+
+        <Button
+            android:id="@+id/btn7"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/anaheim"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="88dip"
+            android:onClick="handleClick"
+            android:tag="7"
+            android:text="7"
+            android:textColor="#2ac8b9"
+            android:textSize="24sp"
+            app:iconTint="@color/black" />
+
+        <Button
+            android:id="@+id/btn8"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anaheim"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="88dip"
+            android:onClick="handleClick"
+            android:tag="8"
+            android:text="8"
+            android:textColor="#2ac8b9"
+            android:textSize="24sp"
+            app:iconTint="@color/black" />
+
+        <Button
+            android:id="@+id/btn9"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anaheim"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="88dip"
+            android:onClick="handleClick"
+            android:tag="9"
+            android:text="9"
+            android:textColor="#2ac8b9"
+            android:textSize="24sp"
+            app:iconTint="@color/black" />
+
+        <Button
+            android:id="@+id/btnDiv"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anaheim"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="88dip"
+            android:onClick="handleClick"
+            android:text="/"
+            android:textColor="#2ac8b9"
+            android:textSize="24sp"
+            app:iconTint="@color/black" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="88dip">
+
+        <Button
+            android:id="@+id/btn4"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anaheim"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="88dip"
+            android:onClick="handleClick"
+            android:text="4"
+            android:textColor="#2ac8b9"
+            android:textSize="24sp"
+            app:iconTint="@color/black" />
+
+        <Button
+            android:id="@+id/btn5"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anaheim"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="88dip"
+            android:onClick="handleClick"
+            android:text="5"
+            android:textColor="#2ac8b9"
+            android:textSize="24sp"
+            app:iconTint="@color/black" />
+
+        <Button
+            android:id="@+id/btn6"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anaheim"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="88dip"
+            android:onClick="handleClick"
+            android:text="6"
+            android:textColor="#2ac8b9"
+            android:textSize="24sp"
+            app:iconTint="@color/black" />
+
+        <Button
+            android:id="@+id/btnMult"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anaheim"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="88dip"
+            android:onClick="handleClick"
+            android:text="*"
+            android:textColor="#2ac8b9"
+            android:textSize="24sp"
+            app:iconTint="@color/black" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="88dip">
+
+        <Button
+            android:id="@+id/btn1"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anaheim"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="88dip"
+            android:onClick="handleClick"
+            android:text="1"
+            android:textColor="#2ac8b9"
+            android:textSize="24sp"
+            app:iconTint="@color/black" />
+
+        <Button
+            android:id="@+id/btn2"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anaheim"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="88dip"
+            android:onClick="handleClick"
+            android:text="2"
+            android:textColor="#2ac8b9"
+            android:textSize="24sp"
+            app:iconTint="@color/black" />
+
+        <Button
+            android:id="@+id/btn3"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anaheim"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="88dip"
+            android:onClick="handleClick"
+            android:text="3"
+            android:textColor="#2ac8b9"
+            android:textSize="24sp"
+            app:iconTint="@color/black" />
+
+        <Button
+            android:id="@+id/btnMinus"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anaheim"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="88dip"
+            android:onClick="handleClick"
+            android:text="-"
+            android:textColor="#2ac8b9"
+            android:textSize="24sp"
+            app:iconTint="@color/black" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="88dip">
+
+        <Button
+            android:id="@+id/btn0"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anaheim"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="88dip"
+            android:onClick="handleClick"
+            android:text="0"
+            android:textColor="#2ac8b9"
+            android:textSize="24sp"
+            app:iconTint="@color/black" />
+
+        <Button
+            android:id="@+id/btnDot"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anaheim"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="88dip"
+            android:onClick="handleClick"
+            android:text="."
+            android:textColor="#2ac8b9"
+            android:textSize="24sp"
+            app:iconTint="@color/black" />
+
+        <Button
+            android:id="@+id/btnEqual"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anaheim"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="88dip"
+            android:onClick="handleClick"
+            android:text="="
+            android:textColor="#2ac8b9"
+            android:textSize="24sp"
+            app:iconTint="@color/black" />
+
+        <Button
+            android:id="@+id/btnPlus"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anaheim"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="88dip"
+            android:onClick="handleClick"
+            android:text="+"
+            android:textColor="#2ac8b9"
+            android:textSize="24sp"
+            app:iconTint="@color/black" />
+    </TableRow>
+
+</TableLayout>
